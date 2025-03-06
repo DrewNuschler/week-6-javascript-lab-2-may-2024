@@ -27,10 +27,16 @@ function partOneA () {
 // Try It!
 // Now try it at 20%
 function partOneB () {
-  alert("Try it!");
-  // Tip calulator at 20%
+  
+
   let bill, billNumber, tip;
 
+  bill = prompt("How much did this cost");
+  billNumber = Number(bill);
+  tip = billNumber * .20;
+
+  messageParagraph.innerHTML = `It was ${bill} for the meal, the tip should be ${tip}`
+     
   // 1. prompt for the bill
   
   // 2. convert it to number
@@ -59,7 +65,13 @@ function partTwoA () {
 
 // Try it!
 function partTwoB () {
-  alert("Try it!");
+  let bill, billNumber, split;
+
+  bill = prompt("What was the bill?");
+  billNumber = Number(bill);
+  split = billNumber/3;
+
+  messageParagraph.innerHTML =`The meal cost ${bill}, if we split it three ways that would be ${split} each.`
   // 1. prompt for the bill
 
   // 2. convert it to number
@@ -96,18 +108,24 @@ function partThreeA () {
 // Try it!
 // This is a function that takes a number, x as an argument and returns the amount you shuold tip at 20%
 function twentyPercentTip(x) {
-  
+ 
+  return  x*.20;
+
 }
+function tipMessage(tip,bill,tipRate) {
+   
+  return `The bill is ${bill}. The tip should be ${tip} at ${tipRate} percent.`
+} 
 function partThreeB () {
-  alert("Try it!");
   let bill, billNumber, tip, message;
-  // 1. prompt the user for the bill
-  
-  // 2. convert the bill to a number
-  
-  // 3. calculate the tip
-  
-  // 4. create the message
+   // 1. prompt the user for the bill
+   bill = prompt("How much was the bill?");
+   // 2. convert the bill to a number
+   billNumber = Number(bill);
+   // 3. calculate the tip
+   tip = twentyPercentTip(billNumber);
+   // 4. create the message
+   message = tipMessage(tip, bill, 20);
   // HINT: use tipMessage, which is defined above partThreeA
   
   // 5. set the message
@@ -140,22 +158,28 @@ function partFourA () {
 
 // Try it!
 function splitBillByFour(x) {
+   return x/4;
   // Try it! return x divided by 4
   // to calculate the bill.
 }
+function messageForSplitBill(bill, split, count) {
 
+   return `The bill is go to be ${bill}. You're part will be ${split} with ${count} people.`
+
+}
 function partFourB () {
-  alert("Try it!");
+
   let bill, billNumber, split, message;
-  // 1. prompt for bill
-
-  // 2. convert bill to number 
-
-  // 3. use a function to calculate the split
-
-  // 4. use a function to create the message
-
-  messageParagraph.innerHTML = message;
+   // 1. prompt for bill
+   bill = prompt("What is the bill");
+   // 2. convert bill to number 
+   billNumber = Number(bill);
+   // 3. use a function to calculate the split
+   split = splitBillByFour(billNumber);
+   // 4. use a function to create the message
+   message = messageForSplitBill(bill, split, "four");   
+  
+   messageParagraph.innerHTML = message;
 }
 
 
