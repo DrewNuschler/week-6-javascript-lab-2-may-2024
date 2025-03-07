@@ -26,7 +26,7 @@ function partOneA () {
 // Try It!
 // Try it with a different number
 function partOneB () {
-  alert("Try it!");
+  
   let answer, guess, guessNumber;
   answer = 3;
   guess = prompt("Guess a number between 1 and 10.");
@@ -70,6 +70,16 @@ function partTwoB () {
   guessNumber = Number(guess);
 
   // 1. check if the number is too low.
+  if(guessNumber < answer) {
+
+    messageParagraph.innerHTML = `Your guess is too low. Try again.`;
+  } else if (guessNumber > answer) {
+
+    messageParagraph.innerHTML = `Your guess is to high. Try again.`; 
+  } else {
+
+    messageParagraph.innerHTML = `You guessed the number! It was ${answer}.`;
+  }
 
     // 2. if it is, set the message for too low.
 
@@ -105,15 +115,25 @@ function partThreeB () {
   let color;
   color = prompt("What color describes your mood today?");
   // 1. check for your first color
+  if(color === "baby-blue"){
 
+    messageParagraph.innerHTML = `Are you feeling calm?`;
+  
+  } else if(color === "emerald green") {
+
+    messageParagraph.innerHTML = `Do you feel energized?`;
+  
+  } else {
+
+    messageParagraph.innerHTML = `Pick another color?`;
+  
+  
     // 2. give the message for this color
-
-  // 3. check for the next color
-
-    // 4. give the message for the next color
     
-  // 5. otherwise, ask for another color
-
+   // 3. check for the next color
+ 
+    // 4. give the message for the next color
+   } 
 }
 
 // Example
@@ -125,9 +145,9 @@ function partFourA () {
   if(playerOne === "rock" && playerTwo === "paper"){
     messageParagraph.innerHTML = "Player Two wins!";
   } else if (playerOne === "scissors" && playerTwo === "rock") {
-    messageParagraph.innerHTML = "Player Two wins!";
+    messageParagraph.innerHTML = `Player Two wins!`;
   } else {
-    messageParagraph.innerHTML = "It's a tie!";
+    messageParagraph.innerHTML = `It's a tie!`;
   }
   // NOTE: This is not a complete game. You need to figure out all the possible outcomes for it to work properly.
 }
@@ -138,7 +158,23 @@ function partFourA () {
 // NOTE: If you miss some of the options, that's OK. 
 // Try to catch as many as you can.
 function partFourB () {
-  alert("Try it!");
+  let playerOne, playerTwo;
+  playerOne = prompt("Player One, choose rock, paper, or scissors.");
+  playerTwo = prompt("Player Two, choose rock, paper, or scissors.");
+  if(playerOne === "rock" && playerTwo === "paper") {
+    
+    messageParagraph.innerHTML = `Player Two wins!`;
+  } else if(playerOne === "scissors" && playerTwo === "rock") {
+   
+    messageParagraph.innerHTML = `Player two wins!`;
+  
+  } else{
+
+    messageParagraph.innerHTML = `Try again!`;
+  }
+  
+    
+  
 
 }
 
