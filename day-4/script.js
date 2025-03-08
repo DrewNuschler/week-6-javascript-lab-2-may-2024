@@ -22,11 +22,13 @@ function partOneA () {
 // Try It!
 // Create a loop with a different high number
 function partOneB () {
-  alert("Try it!");
+  let highNumber = 10;
   // 1. Create a for loop.
 
     // 2. give the user and alert with the current number.
-
+   for (let i = 10; i < highNumber; i++) {
+     alert(`The number is ${i}`);
+   }
 }
 
 // Example
@@ -54,13 +56,13 @@ function partTwoB () {
   messageParagraph.innerHTML = "Flavors";
 
   // 1. Create an array of 5 flavors
-
+  let flavors = ["cookie dough", "chocolate chip", "birthday cake", "rocky road"];
   // 2. Find the length of the array
-
+  let highNumber = flavors.length;
   // 3. Create a for loop.
-
+   for (let i = 0; i < highNumber; i++){
     // 4. give the user and alert with the current friend.
-
+   alert(`The flavors are ${flavors[i]}`);}
 }
 
 // Example
