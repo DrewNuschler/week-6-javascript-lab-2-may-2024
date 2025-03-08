@@ -22,12 +22,16 @@ function partOneA () {
 
 // Try It!
 function partOneB () {
-  alert("Try it!");
-  let friends 
-  friends = [];
-  // 1. TODO: Add your own friends to the array
+  let cars = [];
+  cars[1] = "Raptor";
+  cars[2] = "Tacoma";
+  cars[3] = "Camary";
+  cars[4] = "Miata";
 
+  // 1. TODO: Add your own friends to the array
+  
   // 2. TODO: write your friends to the message
+  messageParagraph.innerHTML = `Here are some vehicles ${cars[1]}, ${cars[2]}, ${cars[3]}, ${cars[4]}.`;
 
 }
 
@@ -43,7 +47,7 @@ function partTwoA () {
   friends[4] = "Edward";
 
   // 2. write your friends to the innerHTML of the document
-  messageParagraph.innerHTML = "Your friends are ";
+  messageParagraph.innerHTML = "Your friends are";
   messageParagraph.innerHTML += `${friends[0]}`;
   messageParagraph.innerHTML += `, ${friends[1]}`;
   messageParagraph.innerHTML += `, ${friends[2]}`;
@@ -54,10 +58,21 @@ function partTwoA () {
 
 // Try it!
 function partTwoB () {
-  let friends = [];
-  // 1. Add your friends to the array
+  let pokemon = [];
+  
+  pokemon[0] = "Pikachu";
+  pokemon[1] = "Riachu";
+  pokemon[2] = "Arbok";
+  pokemon[3] = "Squirtle";
+  pokemon[4] = "Charzard";
 
-  // 2. write your friends to the innerHTML of the document
+  
+  messageParagraph.innerHTML = "These are your pokemon.";
+  messageParagraph.innerHTML += `${pokemon[0]}`;
+  messageParagraph.innerHTML += `, ${pokemon[1]}`;
+  messageParagraph.innerHTML += `, ${pokemon[2]}`;
+  messageParagraph.innerHTML += `, ${pokemon[3]}`;
+  messageParagraph.innerHTML += `, ${pokemon[4]}`;
 
 }
 
@@ -68,14 +83,15 @@ function partThreeA () {
   let friend = prompt("Enter a friend's name.");
 
   // 2. add the friend to the message
-  messageParagraph.innerHTML += `, ${friend}`;
+  messageParagraph.innerHTML += `, ${friend} `;
 }
 
 // Try it!
 // Try prompting for a friend with a slightly different prompt or writing the message in a slightly different format.
 function partThreeB () {
+  let friend = prompt("What is your friends name."); 
   // 1. prompt for a friend
-
+  messageParagraph.innerHTML +=  `"${friend} Oh, thats a good name."` 
   // 2. add the friend to the message
 }
 
@@ -104,18 +120,17 @@ function partFourA () {
 // Now ask the user to enter their favorite ice cream flavors.
 let myFavFlavors = [];
 function partFourB () {
-  alert("Try it!");
+  
   let totalFavFlavors, newFavFlavor;
   totalFavFlavors = myFavFlavors.length;
-
   // 1. prompt for a flavor
-
+  newFavFlavor = prompt(`"You have ${totalFavFlavors} flavors listed. if you like any others add them here."`);
   // 2. add the flavor to the array with push()
-
+  myFavFlavors.push(newFavFlavor),
   // 3. add the flavor to the message
-
+  messageParagraph.innerHTML += `<li>${newFavFlavor}<li>`;
   // 4. log the array to the console for debugging
-
+  console.log(myFavFlavors);
 }
 
 // BONUS: Try to add your own button to the page that will accept user input to add to the page.
