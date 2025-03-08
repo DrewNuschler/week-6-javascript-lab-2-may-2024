@@ -86,11 +86,13 @@ function partThreeA () {
 function partThreeB () {
   messageParagraph.innerHTML = "Flavors";
 
-  alert("Try it!");
-  // 1. create an array of 5 flavors
-
+  let flavors = ["cookie dough", "chocolate chip", "birthday cake", "rocky road"];
+  // 1. create an array of 5 flavors;
+  let highNumber = flavors.length;
   // 2. find the length of the array
- 
+  for (let i = 0; i < highNumber; i++){
+    messageParagraph.innerHTML += `<li>${flavors[i]}</li>`;
+  }
   // 3. create a for loop
 
     // 4. write the friend to the innerHTML of the list
@@ -132,9 +134,9 @@ function partFourB () {
   let newFlavor, highNumber;
 
   // 1. prompt for a flavor
-
+  newFlavor =prompt("Add a flavor.")
   // 2. add the flavor to the array with push()
-
+  flavors.push(newFlavor);
   // 3. reset the list in the innerHTML
   messageList.innerHTML = "";
   // 4. set the message to "Flavors"
@@ -144,7 +146,9 @@ function partFourB () {
   highNumber = flavors.length;
 
   // 6. write all the flavors back to the HTML list from the array, updated with our new flavor.
-
+  for (let i = 0; i < highNumber; i++){
+    messageParagraph.innerHTML += `<li>${flavors[i]}</li>`;
+  }
 }
 
 // BONUS
